@@ -1,4 +1,4 @@
-package S1T7N1E1;
+package S1T7N1E2;
 
 public class TreballadorPresencial extends Treballador {
 	 
@@ -28,6 +28,17 @@ public class TreballadorPresencial extends Treballador {
 				
 				return preuFinal;	
 	}
+	
+
+	//mètode obsolet
+	//afegim aquest mètode @Deprecated com advertiment de que en algun moment serà esborrat o no s'utilitzarà
+	@Deprecated
+	public double calcularSous(double horas) {
+		double preuFinal = horas * this.getPreuhora();
+		
+		return preuFinal;
+	}
+	
 /*
 	@Override
 	public String toString() {

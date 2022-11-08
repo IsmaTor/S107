@@ -1,7 +1,7 @@
 package S1T7N1E2;
 
 import java.util.ArrayList;
- 
+
 public class Main {
 
 	@SuppressWarnings("deprecation") 	//afegim aquesta anotació perque desaparegui l'advertiment de Deprecated a calcularSou()
@@ -10,13 +10,19 @@ public class Main {
 		
 		ArrayList<Treballador> empresa = new ArrayList<Treballador>();
 		
-		Treballador treballador1 = new Treballador("Ismael", "Tortosa", 30, 160);
+		Treballador treballador1 = new Treballador("Ismael", "Tortosa", 30);
+		TreballadorPresencial treballador2 = new TreballadorPresencial("Federico", "Fernández", 17, 160);
+		TreballadorOnline treballador3 = new TreballadorOnline("Bruce", "Wayne", 20);
 		
+	
 		empresa.add(treballador1);
+		empresa.add(treballador2);
+		empresa.add(treballador3);
 		
-		System.out.println(treballador1.toString());
 		
-		treballador1.calcularSou(160); //l'advertiment desapareix per posar a sobre del main @SuppressWarnings("deprecation")
+		System.out.println(treballador1.calcularSou(160));
+		System.out.println(treballador2.calcularSous(150)); //l'advertiment desapareix per posar a sobre del main @SuppressWarnings("deprecation")
+		System.out.println(treballador3.calcularSous(150));	//l'advertiment desapareix per posar a sobre del main @SuppressWarnings("deprecation")
 		// TODO Auto-generated method stub
 
 	}
